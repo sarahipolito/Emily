@@ -1,27 +1,32 @@
 <p id="notice"><%= notice %></p>
-<div id="itemsContainer"></div>
+<p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
-
-    <% @items.each do |item| %>
-      <div class="itemhold"></div>
-        <h1><%= item.title %></h1>
-        <%=image_tag@item.image_url,:class=>'welcomIm'%>
-        <h2><%=@item.description%></h2>
-        <div class="itemhold"></div>
-        <p>Price<%=number_to_currency(@item.price,:unit>"€")%>
+ <div id="itemsContainer">
+  
+  <h1>Items</h1>
+     
+      <% @items.each do |item| %>
+      <div class="itemhols">
+       <h1><%= item.title %></h1>
+       
+       <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
+        <p><%= item.description %></p>
+       <p>Price <%= number_to_currency(item.price, :unit => "€") %>
+       <br>
+        Category: <%= item.category %>
         <br>
-        Category:<%=@item.category%>
-        </p>
+        Brand: <%= item.brand %></p>
+       
        <p>
-         <%=link_to 'Show', item,:class=>"buttom",:role=>"buttom"%>
-         <%=link_to 'Edit', edit_item_path(@item),:class=>"buttom",:role=>"buttom"%>
-         <%=link_to 'Destry', item, method:delete, data:{confirm:'Delete?'},:class=>"buttom",:role=>"buttom"%>
-         
-         </div>
-         </div>
-         <br>
-         <%=link_to 'New Item', new_item_path,:class=>"buttom",:role=>"buttom"%>
-         
+         <%= link_to 'Show',  item, :class => "button", :role => "button" %>
+         <%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
+         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
        </p>
-       <% end %>
+        
+      </div>
+    <% end %>
+      
+</div>
+
+<br>
+<%= link_to 'New Item',  new_item_path, :class => "button", :role => "button" %>
