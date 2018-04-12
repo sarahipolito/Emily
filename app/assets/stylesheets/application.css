@@ -2,14 +2,14 @@
     background: url('sunset2.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 30%;
+    height: 40%;
     width: 100%;
     overflow: auto;
 }
 
 .headSec h1{
    
-    font-size: 50px;
+    font-size: 40px;
     text-align: left;
     margin-bottom: 2px;
     margin-top: 40px;
@@ -20,6 +20,10 @@
     width: 70%;
     height: 46%;
 
+}
+
+.homeImg{width: 100%;}
+    
 }
 
 ul{
@@ -35,7 +39,7 @@ ul{
      li a{
      display: inline-block;
      color: #ffffff;
-     font-size: 25px;
+     font-size: 20px;
      text-align: left;
      margin-left: 10px;
      padding-right: 20px;
@@ -44,6 +48,7 @@ ul{
 
 
 .foot{
+
     min-height: 10px;
     background-color: #99ffcc;
     width: 100%;
@@ -52,8 +57,8 @@ ul{
 }
 .foot h6{
     color: #333;
-    font-size: 20px;
+    font-size: 10px;
     padding: 15px;
-    text-align: center
+    text-align: center;
     
 }
