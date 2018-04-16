@@ -6,5 +6,13 @@
       <li><%=link_to "About", about_path%></li>
       <li><%=link_to "Gallery", gallery_path%></li>
       
+      <%if session[:login]==1%>
+      <li><%=link_to "logout", logout_path%></li>
+      
+      <%else%>
+      
+      <li><%=link_to "login", login_path%></li>
+      <%end%>
+      
     </ul>
     </header>
