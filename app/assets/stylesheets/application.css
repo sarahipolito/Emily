@@ -1,51 +1,147 @@
-.headSec{
-    background: url('sunset2.jpg');
+.headSec {
+    min-height: 10px;
+    background-color: #555;
+    background: url("/assets/Site/golfcourse.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    min-height: 25%;
-    overflow: auto;
-}
-
-.headSec h1{
+    margin-bottom:10px;
+    overflow:auto;
    
-    font-size: 40px;
-    text-align: left;
-    margin-bottom: 5px;
-    margin-top: 15%;
-    padding: 10px;
+}
+
+.headSec h1 {
+    
     color: #ffffff;
+    font-size: 80px;
+    padding:15px;
 }
 
-.homeIm{
-    width: 70%;
-    height: 46%;
-
+ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow:hidden;
+    background-color: #333;
 }
 
-.homeImg{width: 100%;
+
+.mainCont {
+    
+    margin:auto;
+    width: 80%;
+    border: 3px solid #b3e0ff;
+    padding: 10px;
+    text-align: center;
     
 }
 
-ul{
-    list-style: none;
-    margin-top: 100px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.welcomeIm {width:30%;}
+
+
+li {float:left;}
+
+
+li a {
+    
+    display:block;
+    color:#ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:none;
+    
+}
+
+
+.welcomeIm {width:30%;}
+
+.foot {
+    min-height: 80px;
+    background-color: #b3e0ff;
+    width: 100%;
+    margin-top: 10px;
+    overflow: auto;
+    
+    
+}
+
+#itemsContainer {
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+
+#itemsContainer h1 {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    
+}
+
+
+.itemhols {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 22%;
+    padding:10px;
+    min-height: 300px;
    
-   
-    }
-     li {float: left;}
-     li a{
-     display: inline-block;
-     color: #ffffff;
-     font-size: 20px;
-     text-align: left;
-     margin-left: 10px;
-     padding-right: 20px;
-     text-decoration: none;
-     }
+}
+
+
+.itemhols h1 {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px
+    
+}
+
+
+.itemhols p {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px
+    
+}
+
+
+
+.itemholsIm {
+    width: 30%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+}
+
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 
 #itemsContainer h2 {
    display: block;
@@ -118,28 +214,32 @@ ul{
 }
 
 
-.foot{
-
-    min-height: 10px;
-    background-color: #ffffff;
+input[type=text], select {
     width: 100%;
-    margin-bottom: 10px;
-    overflow: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-.foot h6{
-    color: #333;
-    font-size: 10px;
-    padding: 20px;
-    text-align: center;
-	margin-top: 20px;
-    
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.itemholsIm {
-    width: 20%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    display: block;
+
+input[type=submit]:hover {
+    background-color: #45a049;
 }
+
+
 .itemholsIm {
     width: 20%; 
     margin-left: auto; 
