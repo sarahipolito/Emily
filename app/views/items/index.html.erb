@@ -1,31 +1,49 @@
 <p id="notice"><%= notice %></p>
 
- <div id="itemsContainer">
-  
-  <h1>Items</h1>
-     
-      <% @items.each do |item| %>
-      <div class="itemhols">
-       <h1><%= item.title %></h1>
-       
-       <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
-        <p><%= item.description %></p>
-       <p>Price <%= number_to_currency(item.price, :unit => "€") %>
-       <br>
-        Category: <%= item.category %>
-        <br>
-        </p>
-       
-       <p>
-         <%= link_to 'Show',  item, :class => "button", :role => "button" %>
-         <%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
-         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
-       </p>
+<div id="itemsContainer">
+    <table id="customers">
+        <% total = 0 %>
+        <% @cart.each do |id, quantity| %>
         
-      </div>
-    <% end %>
-      
-</div>
-
-<br>
-<%= link_to 'New Item',  new_item_path, :class => "button", :role => "button" %>
+        <% item = Item.find_by_id(id) %>
+        
+        <tr>
+            <td>
+                <div class="image">
+                    <%= link_to (image_tag item.image_url, :style =>"height:40px"), item %>
+                </div>
+                
+            </td>
+            
+            <td class="title"><%= link_to item.title, item %></td>
+            <td><a href="/cart/remove/<%= item.id %>">Remove From Cart</a></td>
+            <td class="price"><%= number_to_currency(item.price, :unit =>"€") %></td>
+            <td class="quantity"><%= quantity %></td>
+            <td class="price"><%= number_to_currency(quantity * item.price, :unit =>"€") %></td>
+            
+        </tr>
+        
+        <tr>
+            <% total += quantity * item.price %>
+            
+            
+        </tr>
+        
+        <% end %>
+        
+        <tr>
+            <td>
+            Grang Total: <%= number_to_currency(total, :unit => "€") %>
+            </td>
+        </tr>
+        
+        
+    </table>
+    
+    <p>
+        <a href="/items" class="button">Continue Shopping</a>
+        <a href="#" class="button">Clear Cart</a>
+        
+        
+        </p>
+    </div>
